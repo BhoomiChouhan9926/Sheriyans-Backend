@@ -3,8 +3,12 @@ const express = require("express");
 const app = express();
 const noteModel = require('./model/notes.model')
 const cors = require('cors');
+const path = require('path')
+
+
 app.use(express.json());
 app.use(cors());
+app.use(express.static(path.join(__dirname, "../public")));
 
 // creating api to create notes
 app.post('/api/notes',async (req,res)=>{
@@ -55,6 +59,9 @@ app.delete("/api/notes/:id", async(req,res)=>{
          deleted_note
     })
 })
-
+app.use("*name",(req,res)=>{
+// res.send("this is wild card")  
+  res.sendFile(path.join(__dirname, "../public/index.html"));
+})
 
 module.exports = app;

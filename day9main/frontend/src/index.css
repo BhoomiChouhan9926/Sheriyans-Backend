@@ -27,3 +27,64 @@ html{
   border-radius: 1rem;
 
 }
+.create_note_form{
+   display: flex;
+  gap: 2rem;
+  padding-block: 2rem;
+  padding-inline: 3rem;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+}
+.create_note_form input{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color:rgb(56, 55, 55) ;
+  border:  0.1rem solid gray;
+  font-size: 1.3rem;
+  color: white;
+  transition: 0.3s;
+}
+
+.create_note_form button{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color:rgb(56, 55, 55) ;
+  border:  0.1rem solid gray;
+  font-size: 1.3rem;
+  color: white;
+  transition: all 0.3 ease;
+
+}
+.create_note_form button:active{
+  transform: translateY(0.3rem) scale(0.95);
+  background-color: #3ba940;
+ 
+
+}
+.btn_box{
+ 
+ padding-top: 2rem;
+ padding-inline: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+.btn{
+  padding: 0.3rem;
+  border-radius: 0.2rem;
+  background-color:rgb(81, 79, 79) ;
+  border:  0.1rem solid gray;
+  font-size: 1rem;
+  color: white;
+  transition: all 0.3 ease;
+
+}
+.btn:active{
+  background-color: rgb(142, 38, 38);
+  transform: translateY(0.2rem) scale(0.95);
+}
+
+
