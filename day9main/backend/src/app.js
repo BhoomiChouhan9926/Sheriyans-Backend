@@ -59,9 +59,19 @@ app.delete("/api/notes/:id", async(req,res)=>{
          deleted_note
     })
 })
-app.use("*name",(req,res)=>{
-// res.send("this is wild card")  
+// app.use("/*",(req,res)=>{
+// // res.send("this is wild card")  
+//   res.sendFile(path.join(__dirname, "../public/index.html"));
+// })
+
+
+// app.get('/:path(*)', (req, res) => {
+//   res.sendFile(path.join(__dirname, "../public/index.html"));
+// });
+
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
-})
+});
+
 
 module.exports = app;
